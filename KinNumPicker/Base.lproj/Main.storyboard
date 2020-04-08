@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dL4-7Z-Zut">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KinNumPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの生年月日を選んでね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyL-lu-2u6">
+                                <rect key="frame" x="31.5" y="142" width="312.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kinナンバーを調べよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-dc-Q3e">
+                                <rect key="frame" x="43.5" y="77" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="9Dc-Q7-fGn">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-2871723600">
+                                    <!--1910-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="2051175600">
+                                    <!--2065-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja"/>
+                                <connections>
+                                    <action selector="birthDaySelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="qsO-A9-0ll"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1B-AP-t62">
+                                <rect key="frame" x="91.5" y="535" width="192" height="36"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Kinナンバーを調べる">
+                                    <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SdR-Hg-kdG" kind="show" id="2ye-4g-AMe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたは何月何日生まれ？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-ce-J0z">
+                                <rect key="frame" x="71.5" y="465" width="232.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Dc-Q7-fGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="71D-Ya-Vae"/>
+                            <constraint firstItem="u1B-AP-t62" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6T-xP-7Gt"/>
+                            <constraint firstItem="Kkb-dc-Q3e" firstAttribute="centerX" secondItem="PyL-lu-2u6" secondAttribute="centerX" id="Zhq-6D-Gpg"/>
+                            <constraint firstItem="PyL-lu-2u6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8J-mB-ZDG"/>
+                            <constraint firstItem="u1B-AP-t62" firstAttribute="top" secondItem="5AN-ce-J0z" secondAttribute="bottom" constant="47" id="gak-k5-ySl"/>
+                            <constraint firstItem="PyL-lu-2u6" firstAttribute="top" secondItem="Kkb-dc-Q3e" secondAttribute="bottom" constant="35" id="jHa-np-hUh"/>
+                            <constraint firstItem="9Dc-Q7-fGn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="moY-GW-VeW"/>
+                            <constraint firstItem="5AN-ce-J0z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qEp-MS-8s8"/>
+                            <constraint firstItem="5AN-ce-J0z" firstAttribute="top" secondItem="9Dc-Q7-fGn" secondAttribute="bottom" constant="23.5" id="rbR-Bd-sH6"/>
+                            <constraint firstItem="PyL-lu-2u6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="wPl-0P-66f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XGU-H4-Ku7"/>
+                    <connections>
+                        <outlet property="bdLabel" destination="5AN-ce-J0z" id="A2y-UI-sOX"/>
+                        <outlet property="datePicker" destination="9Dc-Q7-fGn" id="LFe-nW-1xU"/>
+                        <outlet property="kinbutton" destination="u1B-AP-t62" id="apn-ZV-2pn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010.4000000000001" y="120.98950524737631"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="fYd-IG-tZZ">
+            <objects>
+                <viewController id="SdR-Hg-kdG" customClass="ResultViewController" customModule="KinNumPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRz-9e-S3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●●です！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eum-N5-0gC">
+                                <rect key="frame" x="111.5" y="265" width="152.5" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R7g-6O-QZg">
+                                <rect key="frame" x="40" y="137" width="295" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●年●月●日生まれの" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmI-80-FLC">
+                                        <rect key="frame" x="38.5" y="0.0" width="218.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのkinナンバーは…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edt-Ib-VkW">
+                                        <rect key="frame" x="20" y="28.5" width="255" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8k5-g3-ehW">
+                                <rect key="frame" x="103" y="359" width="169.5" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの鏡kinは…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3N-K7-Ahl">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0h-d7-ly7">
+                                        <rect key="frame" x="58.5" y="25.5" width="52.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-NU-UCA">
+                                <rect key="frame" x="71" y="456" width="233" height="55.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの絶対反対kinは…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsf-nA-Cvj">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Cw8-TX-Hkr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-go-I5b">
+                                        <rect key="frame" x="90.5" y="29" width="52.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ck-NU-UCA" firstAttribute="leading" secondItem="hMv-Hc-uSa" secondAttribute="leading" constant="71" id="7Gz-WB-ptw"/>
+                            <constraint firstItem="R7g-6O-QZg" firstAttribute="centerX" secondItem="8k5-g3-ehW" secondAttribute="centerX" id="A9q-Rp-5bg"/>
+                            <constraint firstItem="Eum-N5-0gC" firstAttribute="centerX" secondItem="uRz-9e-S3h" secondAttribute="centerX" id="PwT-Wn-vtI"/>
+                            <constraint firstItem="R7g-6O-QZg" firstAttribute="centerX" secondItem="uRz-9e-S3h" secondAttribute="centerX" id="SQb-M6-Lai"/>
+                            <constraint firstItem="8k5-g3-ehW" firstAttribute="centerX" secondItem="uRz-9e-S3h" secondAttribute="centerX" id="Uoe-8b-Gkk"/>
+                            <constraint firstItem="3ck-NU-UCA" firstAttribute="top" secondItem="8k5-g3-ehW" secondAttribute="bottom" constant="45" id="c59-31-Bzj"/>
+                            <constraint firstItem="Eum-N5-0gC" firstAttribute="top" secondItem="uRz-9e-S3h" secondAttribute="top" constant="265" id="hE4-gX-eXz"/>
+                            <constraint firstItem="3ck-NU-UCA" firstAttribute="centerX" secondItem="uRz-9e-S3h" secondAttribute="centerX" id="j3a-9t-9St"/>
+                            <constraint firstItem="Eum-N5-0gC" firstAttribute="top" secondItem="R7g-6O-QZg" secondAttribute="bottom" constant="72" id="pHZ-eV-heK"/>
+                            <constraint firstItem="hMv-Hc-uSa" firstAttribute="bottom" secondItem="3ck-NU-UCA" secondAttribute="bottom" constant="106.5" id="tQi-ao-Fls"/>
+                            <constraint firstItem="8k5-g3-ehW" firstAttribute="top" secondItem="Eum-N5-0gC" secondAttribute="bottom" constant="57" id="x01-0x-fhl"/>
+                            <constraint firstItem="R7g-6O-QZg" firstAttribute="leading" secondItem="hMv-Hc-uSa" secondAttribute="leading" constant="40" id="x8S-8u-OgI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hMv-Hc-uSa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N9Z-jd-5VU"/>
+                    <connections>
+                        <outlet property="kagamiKin" destination="Z0h-d7-ly7" id="zYm-lP-IQh"/>
+                        <outlet property="kinNum" destination="Eum-N5-0gC" id="iui-3e-JbL"/>
+                        <outlet property="reverseKin" destination="WZk-go-I5b" id="Bcr-p3-AGp"/>
+                        <outlet property="umareLabel" destination="mmI-80-FLC" id="9ZD-5x-7jf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YR-xd-hex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857" y="121"/>
+        </scene>
+        <!--サイトを見る-->
+        <scene sceneID="bAE-mE-S74">
+            <objects>
+                <viewController id="I77-lb-9np" customClass="OnWebViewController" customModule="KinNumPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVO-Gx-Ccd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geP-Ze-p6f">
+                                <rect key="frame" x="55.5" y="311.5" width="264" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="もう一度サイトを見る"/>
+                                <connections>
+                                    <action selector="oneMoreTapped:" destination="I77-lb-9np" eventType="touchUpInside" id="KMT-US-diw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="geP-Ze-p6f" firstAttribute="centerY" secondItem="yVO-Gx-Ccd" secondAttribute="centerY" id="BtB-WX-fab"/>
+                            <constraint firstItem="geP-Ze-p6f" firstAttribute="centerX" secondItem="yVO-Gx-Ccd" secondAttribute="centerX" id="HKC-Bg-1ik"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eUf-ax-OiS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="サイトを見る" image="desktopcomputer" catalog="system" id="3pR-TQ-3Gt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSb-7F-z8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="892"/>
+        </scene>
+        <!--kinナンバーとは？-->
+        <scene sceneID="Spv-tR-blA">
+            <objects>
+                <viewController id="ae4-nL-rgz" customClass="KaisetsuViewController" customModule="KinNumPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQK-ZW-wvd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94g-Uz-BRh">
+                                <rect key="frame" x="40" y="40" width="295" height="567"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MD6-1J-Srm">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="200.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kinナンバーとは？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-E4-P7t">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-NC-La2">
+                                                <rect key="frame" x="0.0" y="26.5" width="295" height="174"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <string key="text">「kinナンバー」とは、誕生日から導き出せる「1〜260」までの番号のことです。これは「260日」を一年として数える「マヤ暦」の考え方に基づいています。kinナンバーは、人生のガイドマップとなります。kinナンバーを知ることは、今後の人生をどのように歩んでいくのかを知ることなのです。</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9OO-NC-La2" firstAttribute="trailing" secondItem="MD6-1J-Srm" secondAttribute="trailingMargin" id="bDz-FP-uge"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7KM-kq-3we">
+                                        <rect key="frame" x="0.0" y="183.5" width="295" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鏡kinとは？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvG-e2-0oC">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-2d-gva">
+                                                <rect key="frame" x="0.0" y="26.5" width="295" height="173.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <string key="text">鏡kin（鏡の向こう）は、もう一人の自分であることを指します。あなたの持っているkinナンバーに対して、自分の隠れた性質を持っているのがこの「鏡kin」です。鏡kin（鏡の向こう）の人が現れたら、今の生き方がとても正しく、宇宙から応援されていると証拠だと言われています。自分の生き方が間違っていなかったら、もう一人の自分に会えるのです。</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GfA-2d-gva" firstAttribute="trailing" secondItem="7KM-kq-3we" secondAttribute="trailingMargin" id="jIG-jd-q8T"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y6F-21-YJ5">
+                                        <rect key="frame" x="0.0" y="366.5" width="295" height="200.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="絶対反対kinとは？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-vl-yM9">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ebn-ch-K42">
+                                                <rect key="frame" x="0.0" y="26.5" width="295" height="174"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <string key="text">「絶対反対kin」は、反対の性質（エネルギー）を持っていることを指します。絶対反対kinは、別名「開運の目印kin」とも呼ばれており、絶対反対kinの人が現れたら、大きな幸運が近いと言われています。というのも、自分が持っていない、いわば不足している部分を補うことができれば、さらに自分をブラシュアップできますよね。自分の性質だけでなく、反対の性質も受け入れられた時にこそ、本当の意味で運が開けてくるのです。</string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ebn-ch-K42" firstAttribute="trailing" secondItem="y6F-21-YJ5" secondAttribute="trailingMargin" id="qXA-Fj-5w5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hBX-H3-01c" firstAttribute="trailing" secondItem="94g-Uz-BRh" secondAttribute="trailing" constant="40" id="MOr-DV-4JL"/>
+                            <constraint firstItem="94g-Uz-BRh" firstAttribute="top" secondItem="hBX-H3-01c" secondAttribute="top" constant="40" id="c5O-fU-ITE"/>
+                            <constraint firstItem="94g-Uz-BRh" firstAttribute="leading" secondItem="hBX-H3-01c" secondAttribute="leading" constant="40" id="erO-jW-PQy"/>
+                            <constraint firstAttribute="bottom" secondItem="94g-Uz-BRh" secondAttribute="bottom" constant="60" id="thz-fh-r4A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hBX-H3-01c"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="kinナンバーとは？" image="questionmark.circle.fill" catalog="system" id="eUf-rw-IBx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHs-lw-i1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.8" y="891.90404797601207"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SwR-uQ-6gw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dL4-7Z-Zut" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qDb-A9-daR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8HB-B1-Zda" kind="relationship" relationship="viewControllers" id="W9C-8b-Zdt"/>
+                        <segue destination="I77-lb-9np" kind="relationship" relationship="viewControllers" id="cel-80-Ru1"/>
+                        <segue destination="ae4-nL-rgz" kind="relationship" relationship="viewControllers" id="qzG-96-aLK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s72-HK-fV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="120.98950524737631"/>
+        </scene>
+        <!--Kinナンバーを検索-->
+        <scene sceneID="Kkk-qo-Dlj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8HB-B1-Zda" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kinナンバーを検索" image="magnifyingglass" catalog="system" id="2WL-aV-8kg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="66T-yO-QCO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="crj-XP-fj0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRe-SC-3ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="desktopcomputer" catalog="system" width="64" height="50"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
